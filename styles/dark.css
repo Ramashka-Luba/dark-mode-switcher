@@ -1,0 +1,19 @@
+:root {
+  --back-color: #273a43;
+  --back-image: url('../asset/images/dark.jpg');
+  --body-color: #fffff0;
+  --body-shadow: rgb(225 168 122 / 0.6);
+  --body-glow: rgb(225 225 225 / 0.7);
+}
+
+.switcher__radio {
+  filter: invert(1);
+}
+
+.switcher__radio:checked {
+  filter: invert(0);
+}
+
+.switcher__status {
+  filter: invert(1);
+}
