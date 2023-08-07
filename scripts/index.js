@@ -1,5 +1,5 @@
-const lightStyles = document.querySelectorAll('link[rel=stylesheet] [media*=prefers-color-scheme][media*=light]');
-const darkStyles = document.querySelectorAll('link[rel=stylesheet] [media*=prefers-color-scheme][media*=dark]');
+const lightStyles = document.querySelectorAll('link[rel=stylesheet][media*=prefers-color-scheme][media*=light]');
+const darkStyles = document.querySelectorAll('link[rel=stylesheet][media*=prefers-color-scheme][media*=dark]');
 const darkSchemeMedia = matchMedia('(prefers-color-scheme: dark)');
 const switcherRadios = document.querySelectorAll('.switcher__radio');
 
@@ -7,7 +7,7 @@ function setupSwitcher() {
   const savedScheme = getSavedScheme();
 
   if (savedScheme !== null) {
-    const currentRadio = document.querySelector(`.switcher__radio [value=${savedScheme}]`);
+    const currentRadio = document.querySelector(`.switcher__radio[value=${savedScheme}]`);
     currentRadio.checked = true;
   }
 
@@ -35,7 +35,7 @@ function setScheme(scheme) {
   if (scheme === 'auto') {
     clearScheme();
   } else {
-    saveScheme(scheme)
+    saveScheme(scheme);
   }
 }
 
